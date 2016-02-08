@@ -2,7 +2,7 @@ package ddns_server
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/meshwalker/ddns-server/master/database"
+	"github.com/meshwalker/ddns-server/database"
 )
 
 func main() {
