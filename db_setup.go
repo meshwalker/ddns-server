@@ -1,4 +1,4 @@
-package database
+package ddns_server
 
 import (
 	"database/sql"

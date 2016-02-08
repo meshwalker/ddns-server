@@ -2,7 +2,6 @@ package ddns_server
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/meshwalker/ddns-server/database"
 )
 
 func main() {
@@ -11,7 +10,7 @@ func main() {
 		log.Fatal("Can't read config values")
 	}
 
-	db, err := database.New(cfg.DbHost, cfg.Port, cfg.DbName, cfg.DbUser, cfg.DbPassword)
+	db, err := NewDB(cfg.DbHost, cfg.Port, cfg.DbName, cfg.DbUser, cfg.DbPassword)
 	if err != nil {
 		log.Fatal("Can't connect to database!")
 	}

@@ -1,4 +1,4 @@
-package database
+package ddns_server
 
 import (
 	"database/sql"
@@ -10,7 +10,7 @@ import (
 
 
 
-func New(dbhost, dbport, dbname, dbuser, dbpassword string) (*sql.DB,error){
+func NewDB(dbhost, dbport, dbname, dbuser, dbpassword string) (*sql.DB,error){
 	var pgconf string = "host=" + dbhost+ " "
 	pgconf = pgconf + "port=" + dbport + " "
 	pgconf = pgconf + "user=" + dbuser+ " "
